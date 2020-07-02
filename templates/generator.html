@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PasswordGenerator- Generator</title>
+</head>
+
+<body>
+	<table style="float: right; width: 48%">
+		<tbody>
+			<tr>
+				<td>
+					<p>
+						<img src="{% static 'images/lock3.png' %}" alt="Lock Image" style="width: 450px; height: 550px">
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div>
+	<center>
+		<h1> --Generated Password-- </h1>
+		<p>_____________________________________________________________</p>
+		<h1 style="background-color:lightblue; text-align: center; border: 2px solid white; padding: 30px; margin: 30px; column-width: 300px">{{ password }}</h1>
+
+		<button onClick="window.location.reload();">Get New Password</button>
+		<a href="{% url 'password' %}">
+    		<button>Home Page</button>
+		</a>
+
+		<h4> Want to save this password in your db?? </h4>
+
+	<form method = 'post'>
+		{% csrf_token %}
+		<table>
+			<tr>
+				<td><strong>Platform(i.e. Whatsapp, Fb):</strong></td>
+				<td><input type="text" name="user" required=""></td>
+			</tr>
+			<tr>
+				<td><strong>Password(If you want to add): </strong></td>
+				<td><input type="text" name="passw" value="{{password}}"></td>
+			</tr>
+		</table>
+		<input type="submit" value="Save"><br>
+	</form>
+	</center>
+</div>
+</body>
+</html>

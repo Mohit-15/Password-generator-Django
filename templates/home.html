@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PasswordGenerator- Home</title>
+</head>
+<!--<style>
+table, th, td {
+  border: solid black;
+}
+</style>-->
+<body>
+	<table style="float: right; width: 45%">
+		<tbody>
+			<tr>
+				<td>
+					<p>
+						<img src="{% static 'images/lock2.png' %}" alt="Lock Image" style="width: 350px; height: 350px">
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<center>
+		<h2> -----Password Generator----- </h2>
+		<p>___________________________________________________________________</p>
+			<form action="{% url 'generator' %}">
+				<table style="width:400px">
+				<tr>
+	    			<th>Filter</th>
+	    			<th>Apply</th>
+	  			</tr>
+	  			<tr>
+	    			<td><strong>Length</strong></td>
+	    			<td><center><select name = 'length'>
+						<option value="8" selected="">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+					</select></center></td>
+	 			</tr>
+	 			<tr>
+	 				<td><strong>Uppercase</strong></td>
+	 				<td><center><input type="checkbox" name="uppercase"></center></td>
+	 			</tr>
+	 			<tr>
+	 				<td><strong>Numbers</strong></td>
+	 				<td><center><input type="checkbox" name="numbers"></center></td>
+	 			</tr>
+	 			<tr>
+	 				<td><strong>Special Characters</strong></td>
+	 				<td><center><input type="checkbox" name="specialChar"></center></td>
+	 			</tr>
+				</table>
+				<input type="submit" value="Generate Password">
+			</form>
+		<p>___________________________________________________________________</p>
+	</center>
+</body>
+</html>
+

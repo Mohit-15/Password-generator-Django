@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PasswordGenerator- Thank You</title>
+</head>
+<body>
+	<center>
+		{% for msg in messages %}
+			<h1>{{ msg }}</h1>
+		{% endfor %}
+	</center>
+
+	<p></p>
+	<p></p>
+	<center>
+		<img src="{% static 'images/thnkyou.png' %}" alt="Thank You" style="width: 300px; height: 300px">
+	</center>
+</body>
+</html>

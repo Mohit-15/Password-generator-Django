@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PasswordGenerator- About</title>
+</head>
+<style> 
+.div1 {
+  width: 600px;
+  height: 400px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 20px;
+}
+</style>
+<body>
+	<table style="float: right; width: 50%">
+		<tbody>
+			<tr>
+				<td>
+					<p>
+						<img src="{% static 'images/lock1.png' %}" alt="Lock Image" style="width: 500px; height: 500px">
+					</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="div1">
+	<h1><center>-- Hello -- </center></h1>
+	<p>
+		This is a very basic Django project for generating new passwords. In this, user can apply filters to the desired password like the length of password, uppercase characters, numbers, and special characters. 
+		I have created a database model for storing passwords. If user likes the password and want to use the password in future so the user just have to click on the "Save" button for saving password in the database.
+	</p>
+	<h3><center>Thank You!</center></h3>
+	<center>Wanna try this? <a href="{% url 'password' %}">Click Here.</a></center>
+
+	</div>
+</body>
+</html>
