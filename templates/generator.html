@@ -2,27 +2,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>PasswordGenerator- Generator</title>
 </head>
-
+<style> 
+.div1 {
+  /*width: 100%;*/
+  /*height: 400px;*/
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 30px;
+  margin: 30px;
+}
+</style>
 <body>
-	<table style="float: right; width: 48%">
-		<tbody>
-			<tr>
-				<td>
-					<p>
-						<img src="{% static 'images/lock3.png' %}" alt="Lock Image" style="width: 450px; height: 550px">
-					</p>
-				</td>
-			</tr>
-		</tbody>
-	</table>
 
-	<div>
+	<div class="div1">
 	<center>
-		<h1> --Generated Password-- </h1>
-		<p>_____________________________________________________________</p>
-		<h1 style="background-color:lightblue; text-align: center; border: 2px solid white; padding: 30px; margin: 30px; column-width: 300px">{{ password }}</h1>
+		<h1><u> --Generated Password-- </u></h1>
+		<h1 style="background-color:lightblue; text-align: center; border: 2px solid white; padding: 30px; margin: 30px; column-width: 300px; text-align: center;">{{ password }}</h1>
 
 		<button onClick="window.location.reload();">Get New Password</button>
 		<a href="{% url 'password' %}">
@@ -46,6 +45,14 @@
 		<input type="submit" value="Save"><br>
 	</form>
 	</center>
+	<center>
+		<img src="{% static 'images/lock3.png' %}" style="height: 200px">
+	</center>
 </div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<!-- <img src="{% static 'images/lock3.png' %}" alt="Lock Image" style="width: 450px; height: 550px"> -->
